@@ -280,7 +280,13 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2) {
+  if(arr1.length > arr2.length) {
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
 
 
 
@@ -292,7 +298,18 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2) {
+  let res = []
+
+  for(let i = 0; i < arr1.length; i++) {
+    for(let j = 0; j < arr2.length; j++) {
+      if(arr1[i] == arr2[j]) {
+        res.push(arr1[i]);
+      }
+    }
+  }
+  return res;
+}
 
 
 
@@ -333,7 +350,12 @@ var colt = {
   After that, console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+devMountainEmployees.push(joe);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+
+console.log(devMountainEmployees.length);
 
 
 
@@ -342,7 +364,11 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+for(let i = 0; i < devMountainEmployees.length; i++) {
+  if(devMountainEmployees[i].name == "Cahlan") {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 
 
@@ -354,7 +380,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = [];
 
 
 
@@ -375,8 +401,21 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+let user2 = {
+  name: 'Josi Reis-West',
+  email: 'josi@gmail.com',
+  password: 'Un1c0rns!',
+  username: 'princessJosi'
+};
 
+let user3 = {
+  name: 'Bob User',
+  email: 'bob@gmail.com',
+  password: 'iambob',
+  username: 'HisNameWasRobertPaulson'
+};
+
+users.push(user1, user2, user3);
 
 
 /*
@@ -389,7 +428,11 @@ var user1 = {
   Once you find the array index he's located in, delete him from the array.
 */
 
-//Code Here
+for(let i = 0; i < users.length; i++) {
+  if(users[i].name == 'Mark McIver') {
+    users.splice(i, 1);
+  }
+}
 
 
 
